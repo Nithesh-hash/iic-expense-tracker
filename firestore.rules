@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Rules for IIC Expense Tracker Reinvestments Collection
+    match /iic_reinvestments/{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+
